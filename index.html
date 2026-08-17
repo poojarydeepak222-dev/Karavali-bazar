@@ -1,66 +1,13 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Karavali Bazar - Udupi local business directory. Find shops, services, restaurants and local businesses near you." />
-  <title>Karavali Bazar | Udupi Local Directory</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Karavali Bazar - discover local businesses, shops, services, restaurants and professionals across Udupi."><title>Karavali Bazar | Udupi Local Search</title><link rel="stylesheet" href="style.css"></head>
 <body>
-  <header class="topbar">
-    <div class="brand"><span>Karavali</span> Bazar</div>
-    <a class="add-btn" href="#add-business">+ Add Business</a>
-  </header>
-
-  <main>
-    <section class="hero">
-      <p class="eyebrow">UDUPI LOCAL DIRECTORY</p>
-      <h1>Find local businesses in Udupi</h1>
-      <p class="subtitle">Search shops, services, restaurants and professionals near you.</p>
-      <div class="search-box">
-        <input id="search" type="search" placeholder="Search electrician, restaurant, hotel..." aria-label="Search businesses" />
-        <select id="area" aria-label="Select area">
-          <option value="">All Udupi areas</option>
-          <option>Udupi</option><option>Manipal</option><option>Brahmagiri</option><option>Kundapura</option><option>Karkala</option>
-        </select>
-        <button onclick="filterBusinesses()">Search</button>
-      </div>
-    </section>
-
-    <section class="categories">
-      <h2>Popular categories</h2>
-      <div class="category-grid">
-        <button onclick="setCategory('Electrician')">⚡ Electrician</button>
-        <button onclick="setCategory('Plumber')">🔧 Plumber</button>
-        <button onclick="setCategory('Carpenter')">🪚 Carpenter</button>
-        <button onclick="setCategory('Restaurant')">🍽️ Restaurants</button>
-        <button onclick="setCategory('Hotel')">🏨 Hotels</button>
-        <button onclick="setCategory('Medical')">💊 Medical</button>
-        <button onclick="setCategory('AC Service')">❄️ AC Service</button>
-        <button onclick="setCategory('Auto')">🛺 Auto & Taxi</button>
-      </div>
-    </section>
-
-    <section class="directory">
-      <div class="section-head"><h2>Featured businesses</h2><span id="count"></span></div>
-      <div id="businesses" class="business-list"></div>
-    </section>
-
-    <section id="add-business" class="add-business">
-      <h2>List your business</h2>
-      <p>Get discovered by people searching for local businesses in Udupi.</p>
-      <form onsubmit="submitBusiness(event)">
-        <input required placeholder="Business name" />
-        <input required placeholder="Mobile number" type="tel" />
-        <input required placeholder="Category" />
-        <input required placeholder="Area / location" />
-        <button type="submit">Submit Business</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>© 2026 Karavali Bazar · Udupi Local Business Directory</footer>
-  <script src="app.js"></script>
-</body>
-</html>
+<header class="header"><div class="wrap nav"><a class="logo" href="#">Karavali <b>Bazar</b></a><div class="navlinks"><a href="#categories">Categories</a><a href="#businesses-section">Businesses</a><a href="#add-business">List Business</a></div><a class="login" href="#add-business">For Business</a></div></header>
+<main>
+<section class="hero"><div class="wrap hero-inner"><div class="pill">📍 Udupi's Local Business Directory</div><h1>Find the best <span>local businesses</span> near you</h1><p>Search trusted shops, services, restaurants and professionals across Udupi.</p><div class="search-panel"><div class="search-field"><span>🔎</span><input id="search" type="search" placeholder="Search for electrician, restaurant, hotel..." aria-label="Search businesses"></div><div class="location-field"><span>📍</span><select id="area" aria-label="Select area"><option value="">All Udupi</option><option>Udupi</option><option>Manipal</option><option>Brahmagiri</option><option>Kundapura</option><option>Karkala</option></select></div><button onclick="filterBusinesses()">Search</button></div><div class="quick"><span>Popular:</span><button onclick="setCategory('Electrician')">Electrician</button><button onclick="setCategory('Restaurant')">Restaurants</button><button onclick="setCategory('Hotel')">Hotels</button><button onclick="setCategory('Plumber')">Plumber</button></div></div></section>
+<section class="wrap" id="categories"><div class="section-title"><div><small>EXPLORE</small><h2>Popular categories</h2></div><a href="#businesses-section">View all →</a></div><div class="category-grid"><button onclick="setCategory('Electrician')"><i>⚡</i><strong>Electricians</strong><small>Home & office</small></button><button onclick="setCategory('Plumber')"><i>🔧</i><strong>Plumbers</strong><small>Repairs & service</small></button><button onclick="setCategory('Carpenter')"><i>🪚</i><strong>Carpenters</strong><small>Furniture & woodwork</small></button><button onclick="setCategory('Restaurant')"><i>🍽️</i><strong>Restaurants</strong><small>Food & dining</small></button><button onclick="setCategory('Hotel')"><i>🏨</i><strong>Hotels</strong><small>Stay & rooms</small></button><button onclick="setCategory('Medical')"><i>💊</i><strong>Medical</strong><small>Health & pharmacy</small></button><button onclick="setCategory('AC Service')"><i>❄️</i><strong>AC Service</strong><small>Repair & installation</small></button><button onclick="setCategory('Auto')"><i>🛺</i><strong>Auto & Taxi</strong><small>Travel nearby</small></button></div></section>
+<section class="trend"><div class="wrap"><div class="section-title"><div><small>WHAT'S POPULAR</small><h2>Trending in Udupi</h2></div></div><div class="trend-row"><button>🍛 Seafood Restaurants</button><button>❄️ AC Repair</button><button>⚡ Electrical Services</button><button>🛠️ Home Repairs</button><button>🏠 Interior Designers</button></div></div></section>
+<section class="wrap directory" id="businesses-section"><div class="section-title"><div><small>LOCAL BUSINESSES</small><h2>Featured businesses</h2></div><span id="count"></span></div><div id="businesses" class="business-list"></div></section>
+<section class="business-banner" id="add-business"><div class="wrap banner-inner"><div><small>GROW YOUR BUSINESS</small><h2>Get discovered by Udupi customers</h2><p>Add your business to Karavali Bazar and reach local people searching for your service.</p></div><a href="#add-business-form">+ List Your Business</a></div></section>
+<section class="wrap add-business" id="add-business-form"><div><small>FREE LISTING</small><h2>List your business</h2><p>Submit your details. Our team can review the listing before it goes live.</p></div><form onsubmit="submitBusiness(event)"><input required placeholder="Business name"><input required placeholder="Mobile number" type="tel"><input required placeholder="Category"><input required placeholder="Area / location"><button type="submit">Submit Business</button></form></section>
+</main><footer><div class="wrap footer-inner"><strong>Karavali Bazar</strong><span>Udupi Local Business Directory</span><span>© 2026 Karavali Bazar</span></div></footer><script src="app.js"></script></body></html>
